@@ -1,5 +1,10 @@
 set nocompatible              
 
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 syntax enable
 
 set number
@@ -15,7 +20,14 @@ Plug 'fatih/vim-go'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf.vim'
 Plug 'jparise/vim-graphql'
+Plug 'glepnir/oceanic-material'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
+
+
+set background=dark
+colorscheme oceanic_material
+" colorscheme nord 
 
 " fzf
 map <space> <leader>

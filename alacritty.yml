@@ -9,10 +9,12 @@ window:
     x: 0
     y: 32
   padding:
-    x: 32
+    x: 24
     y: 24
-  decorations: none
-
+  dynamic_padding: true
+    # decorations: none
+  decorations: buttonless
+  #  decorations: transparent
 ###########################################################
 ######################### Font ############################
 ###########################################################
@@ -105,6 +107,8 @@ key_bindings:
   - { key: Tab,     mods: Control,        chars: "\x06\x6e"         } # tmux next tab
   - { key: Tab,     mods: Control|Shift,  chars: "\x06\x70"         } # tmux previous tab
 
+  # Vim commands
+  - { key: S,       mods: Command,        chars: "\x1b\x3a\x77\x0a" } # Write (Save file)
 
 cursor:
   style: Block
@@ -138,3 +142,4 @@ shell:
     - -c
     - "tmux attach || tmux"
 
+TERM: xterm-256color

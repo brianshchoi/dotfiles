@@ -1,4 +1,4 @@
-set nocompatible              
+set nocompatible
 
 " If you have vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))
@@ -17,6 +17,7 @@ filetype off
 " Plugins
 call plug#begin('~/vim/plugged')
 Plug 'fatih/vim-go'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf.vim'
 Plug 'jparise/vim-graphql'

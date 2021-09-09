@@ -26,5 +26,10 @@ alias ns="npm start"
 alias nrg="npm run generate"
 alias nrl="npm run lint"
 
-alias pr="open https://github.com/movio/mc-essentials-ui/pulls"
 alias nv="nvim"
+
+alias df="cd $HOME/dotfiles"
+
+function pr () {
+  open "https://www.github.com/movio/$1/pulls"
+}

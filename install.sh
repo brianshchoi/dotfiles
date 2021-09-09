@@ -5,8 +5,6 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 # Symlink all the files 
 # zsh
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+ln -s ~/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
 
-# Alacritty
-mkdir ~/.config/alacritty
-ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 

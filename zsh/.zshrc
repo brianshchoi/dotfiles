@@ -21,6 +21,7 @@ export PATH=$PATH:~/bin
 # Aliases
 # git
 alias lg="lazygit"
+alias glff="git pull --ff-only"
 # npm/node
 alias ns="npm start"
 alias nrg="npm run generate"

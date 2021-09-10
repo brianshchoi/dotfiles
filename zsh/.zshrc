@@ -22,13 +22,27 @@ export PATH=$PATH:~/bin
 # git
 alias lg="lazygit"
 alias glff="git pull --ff-only"
+
 # npm/node
 alias ns="npm start"
 alias nrg="npm run generate"
 alias nrl="npm run lint"
 
+# editor
 alias nv="nvim"
+function c () {
+  if [ $# -eq 0 ]; then
+    if [ -d "./.git" ];then
+        code .
+    else
+        code
+    fi
+  elif [ $# -eq 1 ]; then
+    code $1
+  fi
+}
 
+# dotfiles
 alias df="cd $HOME/dotfiles"
 
 function pr () {

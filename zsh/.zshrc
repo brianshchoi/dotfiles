@@ -18,6 +18,7 @@ export GOPATH=~/go
 export PATH=$GOPATH/bin:$PATH
 export PATH=$PATH:~/bin
 
+
 # Aliases
 # git
 alias lg="lazygit"
@@ -44,7 +45,28 @@ function c () {
 
 # dotfiles
 alias df="cd $HOME/dotfiles"
+alias zshrc="nvim $HOME/.zshrc"
 
 function pr () {
   open "https://www.github.com/movio/$1/pulls"
 }
+
+# kubernetes
+alias k=kubectl
+source <(kubectl completion zsh)
+complete -F __start_kubectl k
+export KUBECONFIG=$HOME/.kube/config:$HOME/movio/bin/kube/config
+
+# helm
+alias h=helm
+source <(helm completion zsh)
+
+# terraform
+alias tf=terraform
+
+# movio related
+source ~/movio/dotfiles/scripts.sh
+source ~/movio/aws.sh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
